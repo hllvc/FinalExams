@@ -11,14 +11,22 @@ public class Test {
 	private static String question;
 	private static String correctAnswer;
 	
+	private static int numberOfCorrect;
+	private static int numberOfWrong;
+	private static ArrayList<Question> wrongAnswers = new ArrayList<Question>();
+	
 	private static Scanner input = new Scanner(System.in);
 	private static Scanner textInput;
 	private static File file;
 	
-	private static void loadData() {
+	private static void loadData(String destination) {
 		
+		allQ.clear();
+		answers.clear();
+		wrongAnswers.clear();
+		q = null;
 		String answer;
-		file = new File(".Questions/KIRAET");
+		file = new File(destination);
 		try {
 			textInput = new Scanner(file);
 			while (textInput.hasNextLine() && textInput.hasNext()) {
@@ -30,9 +38,7 @@ public class Test {
 						correctAnswer = answer;
 					}
 					answers.add(answer);
-						
 				}
-				textInput.nextLine();
 				q = new Question(question, correctAnswer, answers);
 				allQ.add(q);
 				answers.clear();
@@ -42,45 +48,127 @@ public class Test {
 			System.out.println(e);
 		}
 		
+		writeQuestion(allQ);
 		
 	}
 	
-	private static void writeQuestion() {
+	private static void writeQuestion(ArrayList<Question> questions) {
 		
-		for (Question subject : allQ) {
+		numberOfCorrect = 0;
+		numberOfWrong = 0;
+		
+		for (Question subject : questions) {
 			q = subject;
 			System.out.println(q.getQ() + "\n");
 			answers = q.getAnswers();
 			for (String answ : answers)
 				System.out.println(answ);
 			System.out.println();
-			checkQuestion();
+			System.out.print("Vaš Odgovor: ");
+			char answer = input.next().charAt(0);
+			if(checkQuestion(answer) == "exit")
+				break;
+			else
+				System.out.println(checkQuestion(answer));
+		}
+		
+		System.out.println("\nNumber Of Correct: " + numberOfCorrect/2);
+		System.out.println("\nNumber Of Incorrect: " + numberOfWrong/2);
+		for (int i = 0; i < wrongAnswers.size(); i+=2)
+			wrongAnswers.remove(i);
+		missedQ();
+		wrongAnswers.clear();
+		
+	}
+	
+	private static String checkQuestion(char answer) {
+		
+		if (answer == '0')
+			return "exit";
+		if (answer == q.getCorrectAnswer().charAt(0)) {
+			numberOfCorrect++;;
+			return("----------------------\n"
+					+ "Vaš Odgovor Je Tačan!"
+					+ "\n----------------------\n");
+		} else {
+			numberOfWrong++;
+			wrongAnswers.add(q);
+			return("----------------------\n"
+					+ "Netačan Odgovor!\n\n"
+					+ "Tačan Odgovor Je: \n"
+					+ q.getCorrectAnswer()
+					+ "\n----------------------\n");
 		}
 		
 	}
 	
-	private static void checkQuestion() {
+	private static void missedQ() {
 		
-		System.out.print("Your Answer: ");
+		System.out.println("Želite li ponoviti pogrešno odgovorena pitanja (y/n)? - ");
 		char answer = input.next().charAt(0);
-		if (answer == q.getCorrectAnswer().charAt(0))
-			System.out.println("----------------------\n"
-					+ "Vaš odgovor je tačan!"
-					+ "\n----------------------\n");
-		else {
-			System.out.print("----------------------\n"
-					+ "Netačan odgovor!\n\n"
-					+ "Tačan odgovor je: \n");
-			System.out.println(q.getCorrectAnswer());
-			System.out.println("----------------------\n");
+		if (answer == 'y')
+			writeQuestion(wrongAnswers);
+		else
+			return;
+		
+	}
+	
+	private static void subjectMenu() {
+		
+		byte choice;
+		try {
+			
+			do {
+				Text.subjectMenu();
+				System.out.print("\nVaš Odabir: ");
+				choice = input.nextByte();
+				
+				switch (choice) {
+				case 1:
+					loadData(".Questions/KIRAET");
+					break;
+					
+				case 2:
+					loadData(".Questions/AKAID");
+					break;
+				}
+				
+			} while (choice != 0);
+			
+		} catch (Exception e) {
+		}
+		
+	}
+	
+	private static void mainMenu() {
+		
+		byte choice;
+		try {
+			
+			do {
+				Text.mainMenu();
+				System.out.print("\nVaš Odabir: ");
+				choice = input.nextByte();
+				
+				switch (choice) {
+				case 1:
+					break;
+					
+				case 2:
+					subjectMenu();
+					break;
+				}
+				
+			} while (choice != 0);
+			
+		} catch (Exception e) {
 		}
 		
 	}
 	
 	public static void main(String[] args) {
-		
-		loadData();
-		writeQuestion();
+
+		mainMenu();
 		
 	}
 	
