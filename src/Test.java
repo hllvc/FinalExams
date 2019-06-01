@@ -26,7 +26,7 @@ public class Test {
 		wrongAnswers.clear();
 		q = null;
 		String answer;
-		file = new File(".Questions/" + destination);
+		file = new File("Questions/" + destination);
 		try {
 			textInput = new Scanner(file);
 			while (textInput.hasNextLine() && textInput.hasNext()) {
