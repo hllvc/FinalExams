@@ -180,6 +180,38 @@ public class Test {
 				case 13:
 					loadData("PSIHOLOGIJA");
 					break;
+					
+				case 14:
+					loadData("LOGIKA");
+					break;
+					
+				case 15:
+					loadData("PEDAGOGIJA");
+					break;
+					
+				case 16:
+					loadData("SOCIOLOGIJA");		
+					break;
+					
+				case 17:
+					loadData("HEMIJA");
+					break;
+					
+				case 18:
+					loadData("BIOLOGIJA");
+					break;
+					
+				case 19:
+					loadData("INFORMATIKA");
+					break;
+					
+				case 20:
+					loadData("TIZO");
+					break;
+					
+				case 21:
+					loadData("DEMOKRATIJA");
+					break;
 				}
 				
 			} while (choice != 0);
