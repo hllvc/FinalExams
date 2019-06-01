@@ -3,7 +3,8 @@ public class Text {
 	
 	public static void mainMenu() {
 		
-		System.out.println("\n--MAIN MENU--\n\n"
+		System.out.println("\n___________________\n"
+				+ "\n--MAIN MENU--\n\n"
 				+ "1) Test Simulacija\n"
 				+ "2) Pojedinacni predmeti\n\n"
 				+ "0) IZLAZ");
@@ -11,7 +12,8 @@ public class Text {
 	}
 
 	public static void subjectMenu() {
-		System.out.println("\n--PREDMETI--\n\n"
+		System.out.println("\n___________________\n"
+				+ "\n--PREDMETI--\n\n"
 				+ " 1) Kiraet\n"
 				+ " 2) Akaid\n"
 				+ " 3) Fikh\n"

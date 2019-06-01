@@ -26,7 +26,7 @@ public class Test {
 		wrongAnswers.clear();
 		q = null;
 		String answer;
-		file = new File(destination);
+		file = new File(".Questions/" + destination);
 		try {
 			textInput = new Scanner(file);
 			while (textInput.hasNextLine() && textInput.hasNext()) {
@@ -48,16 +48,17 @@ public class Test {
 			System.out.println(e);
 		}
 		
-		writeQuestion(allQ);
+		writeQuestion();
 		
 	}
 	
-	private static void writeQuestion(ArrayList<Question> questions) {
+	private static void writeQuestion() {
 		
 		numberOfCorrect = 0;
 		numberOfWrong = 0;
 		
-		for (Question subject : questions) {
+		System.out.println();
+		for (Question subject : allQ) {
 			q = subject;
 			System.out.println(q.getQ() + "\n");
 			answers = q.getAnswers();
@@ -68,15 +69,30 @@ public class Test {
 			char answer = input.next().charAt(0);
 			if(checkQuestion(answer) == "exit")
 				break;
-			else
-				System.out.println(checkQuestion(answer));
+			if(checkQuestion(answer) == "correct") {
+				numberOfCorrect++;
+				System.out.println("----------------------\n"
+						+ "Vaš Odgovor Je Tačan!"
+						+ "\n----------------------\n");
+			} else {
+				numberOfWrong++;
+				wrongAnswers.add(q);
+				System.out.println("----------------------\n"
+						+ "Netačan Odgovor!\n\n"
+						+ q.getQ()
+						+ "\n\nTačan Odgovor Je: \n"
+						+ q.getCorrectAnswer()
+						+ "\n----------------------\n");
+			}
 		}
 		
-		System.out.println("\nNumber Of Correct: " + numberOfCorrect/2);
-		System.out.println("\nNumber Of Incorrect: " + numberOfWrong/2);
-		for (int i = 0; i < wrongAnswers.size(); i+=2)
-			wrongAnswers.remove(i);
-		missedQ();
+		System.out.println("\nBroj Tačnih: " + numberOfCorrect);
+		System.out.println("Broj Netačnih: " + numberOfWrong);
+		if (!wrongAnswers.isEmpty()) {
+			allQ = wrongAnswers;
+			wrongAnswers = new ArrayList<Question>();
+			missedQ();
+		}
 		wrongAnswers.clear();
 		
 	}
@@ -85,29 +101,18 @@ public class Test {
 		
 		if (answer == '0')
 			return "exit";
-		if (answer == q.getCorrectAnswer().charAt(0)) {
-			numberOfCorrect++;;
-			return("----------------------\n"
-					+ "Vaš Odgovor Je Tačan!"
-					+ "\n----------------------\n");
-		} else {
-			numberOfWrong++;
-			wrongAnswers.add(q);
-			return("----------------------\n"
-					+ "Netačan Odgovor!\n\n"
-					+ "Tačan Odgovor Je: \n"
-					+ q.getCorrectAnswer()
-					+ "\n----------------------\n");
-		}
-		
+		if (answer == q.getCorrectAnswer().charAt(0))
+			return "correct";
+		else
+			return "incorrect";
 	}
 	
 	private static void missedQ() {
 		
-		System.out.println("Želite li ponoviti pogrešno odgovorena pitanja (y/n)? - ");
+		System.out.println("\nŽelite li ponoviti pogrešno odgovorena pitanja (y/n)? - ");
 		char answer = input.next().charAt(0);
 		if (answer == 'y')
-			writeQuestion(wrongAnswers);
+			writeQuestion();
 		else
 			return;
 		
@@ -125,11 +130,55 @@ public class Test {
 				
 				switch (choice) {
 				case 1:
-					loadData(".Questions/KIRAET");
+					loadData("KIRAET");
 					break;
 					
 				case 2:
-					loadData(".Questions/AKAID");
+					loadData("AKAID");
+					break;
+					
+				case 3:
+					loadData("FIKH");
+					break;
+					
+				case 4:
+					loadData("AHLAK");
+					break;
+					
+				case 5:
+					loadData("TEFSIR");
+					break;
+					
+				case 6:
+					loadData("HADIS");
+					break;
+					
+				case 7:
+					loadData("POVIJEST ISLAMA");
+					break;
+					
+				case 8:
+					loadData("BOSANSKI JEZIK");
+					break;
+					
+				case 9:
+					loadData("ENGLESKI JEZIK");
+					break;
+					
+				case 10:
+					loadData("HISTORIJA");
+					break;
+					
+				case 11:
+					loadData("GEOGRAFIJA");
+					break;
+					
+				case 12:
+					loadData("FILOZOFIJA");
+					break;
+					
+				case 13:
+					loadData("PSIHOLOGIJA");
 					break;
 				}
 				
@@ -152,6 +201,7 @@ public class Test {
 				
 				switch (choice) {
 				case 1:
+					System.out.println("\nJoš Se Radi.\nPristup Ne Odobren!!");
 					break;
 					
 				case 2:
