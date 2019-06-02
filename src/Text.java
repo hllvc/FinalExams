@@ -6,7 +6,8 @@ public class Text {
 		System.out.println("\n___________________\n"
 				+ "\n--MAIN MENU--\n\n"
 				+ "1) Test Simulacija\n"
-				+ "2) Pojedinacni predmeti\n\n"
+				+ "2) Pojedinacni predmeti\n"
+				+ "3) Ispravi Test (Admin)\n\n"
 				+ "0) IZLAZ");
 		
 	}
