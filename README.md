@@ -1,5 +1,5 @@
 # Externa Matura
-Esselamu-alejkum **343.** generacijo!
+Esselamu-alejkum,
 - Ovdje možete pronaći jedan sasvim običan programčić za *Externu Maturu*.
 - [x] Kiraet
 - [x] Akaid
