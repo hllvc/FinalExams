@@ -27,7 +27,7 @@ Esselamu-alejkum **343.** generacijo!
 - [x] Demokratija i ljudsja prava
 
 ## Kontrole
-za izlazak koristi se **0 (*nula*)**;
-Pa cak i unutar pokrentog programa!!
+Unesete broj pokraj opcije i ENTER
+za izlazak u testu koristi se **0 (*nula*)**;
 
 ##### Hvala vam na podrsci
