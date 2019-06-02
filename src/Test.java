@@ -26,6 +26,7 @@ public class Test {
 	
 	private static int numberOfCorrect;
 	private static int numberOfWrong;
+	private static boolean testMark;
 	private static ArrayList<Question> wrongAnswers = new ArrayList<Question>();
 	
 	private static Scanner input = new Scanner(System.in);
@@ -36,6 +37,7 @@ public class Test {
 		
 		allQ.clear();
 		q = null;
+		answers.clear();
 		String answer;
 		file = new File("Questions/" + destination);
 		try {
@@ -53,18 +55,17 @@ public class Test {
 				q = new Question(question, correctAnswer, answers);
 				allQ.add(q);
 				answers.clear();
-				q = null;
 			}
 		} catch (Exception e) {
 			System.out.println(e);
 		}
-		
 	}
 	
 	private static void writeQuestion() {
 		
 		numberOfCorrect = 0;
 		numberOfWrong = 0;
+		int mark;
 		
 		System.out.println();
 		for (Question subject : allQ) {
@@ -97,12 +98,32 @@ public class Test {
 		
 		System.out.println("\nBroj Tačnih: " + numberOfCorrect);
 		System.out.println("Broj Netačnih: " + numberOfWrong);
+		if (!testMark) {
+			testMark = true;
+			mark = getMark(numberOfCorrect);
+			System.out.println("Ocijena: " + mark);
+		}
 		if (!wrongAnswers.isEmpty()) {
 			allQ = wrongAnswers;
 			wrongAnswers = new ArrayList<Question>();
 			missedQ();
 		}
 		wrongAnswers.clear();
+		
+	}
+	
+	private static int getMark(int numberOfCorrect) {
+		
+		if (numberOfCorrect < 40)
+			return 1;
+		else if (numberOfCorrect < 55 && numberOfCorrect > 39)
+			return 2;
+		else if (numberOfCorrect < 70 && numberOfCorrect > 54)
+			return 3;
+		else if (numberOfCorrect < 85 && numberOfCorrect > 69)
+			return 4;
+		else
+			return 5;
 		
 	}
 	
@@ -267,53 +288,54 @@ public class Test {
 			 randomNumbers.add(random);
 			 wrongAnswers.add(allQ.get(random));
 		}
-		
 	}
 	
-	private static void randomTest() {
+	private static ArrayList<Question> randomTest() {
 		
-			loadData("KIRAET");
-			randomQuestion(5, 50);
-			loadData("AKAID");
-			randomQuestion(5, 50);
-			loadData("FIKH");
-			randomQuestion(5, 50);
-			loadData("AHLAK");
-			randomQuestion(4, 35);
-			loadData("TEFSIR");
-			randomQuestion(4, 30);
-			loadData("HADIS");
-			randomQuestion(4, 30);
-			loadData("POVIJEST ISLAMA");
-			randomQuestion(4, 35);
-			loadData("BOSANSKI JEZIK");
-			randomQuestion(13, 108);
-			loadData("ENGLESKI JEZIK");
-			randomQuestion(10, 100);
-			loadData("HISTORIJA");
-			randomQuestion(4, 25);
-			loadData("GEOGRAFIJA");
-			randomQuestion(4, 25);
-			loadData("FILOZOFIJA");
-			randomQuestion(4, 25);
-			loadData("PSIHOLOGIJA");
-			randomQuestion(4, 20);
-			loadData("LOGIKA");
-			randomQuestion(3, 20);
-			loadData("PEDAGOGIJA");
-			randomQuestion(3, 25);
-			loadData("SOCIOLOGIJA");
-			randomQuestion(4, 25);
-			loadData("HEMIJA");
-			randomQuestion(4, 35);
-			loadData("BIOLOGIJA");
-			randomQuestion(4, 35);
-			loadData("INFORMATIKA");
-			randomQuestion(4, 25);
-			loadData("TIZO");
-			randomQuestion(4, 25);
-			loadData("DEMOKRATIJA");
-			randomQuestion(4, 25);
+		loadData("KIRAET");
+		randomQuestion(5, 50);
+		loadData("AKAID");
+		randomQuestion(5, 50);
+		loadData("FIKH");
+		randomQuestion(5, 50);
+		loadData("AHLAK");
+		randomQuestion(4, 35);
+		loadData("TEFSIR");
+		randomQuestion(4, 30);
+		loadData("HADIS");
+		randomQuestion(4, 30);
+		loadData("POVIJEST ISLAMA");
+		randomQuestion(4, 35);
+		loadData("BOSANSKI JEZIK");
+		randomQuestion(13, 108);
+		loadData("ENGLESKI JEZIK");
+		randomQuestion(10, 100);
+		loadData("HISTORIJA");
+		randomQuestion(4, 25);
+		loadData("GEOGRAFIJA");
+		randomQuestion(4, 25);
+		loadData("FILOZOFIJA");
+		randomQuestion(4, 25);
+		loadData("PSIHOLOGIJA");
+		randomQuestion(4, 20);
+		loadData("LOGIKA");
+		randomQuestion(3, 20);
+		loadData("PEDAGOGIJA");
+		randomQuestion(3, 25);
+		loadData("SOCIOLOGIJA");
+		randomQuestion(4, 25);
+		loadData("HEMIJA");
+		randomQuestion(4, 35);
+		loadData("BIOLOGIJA");
+		randomQuestion(4, 35);
+		loadData("INFORMATIKA");
+		randomQuestion(4, 25);
+		loadData("TIZO");
+		randomQuestion(4, 25);
+		loadData("DEMOKRATIJA");
+		randomQuestion(4, 25);
+		
+		return wrongAnswers;
 	}
 	
 	private static void updateAnsw() {
@@ -336,6 +358,14 @@ public class Test {
 		
 	}
 	
+	private static void simulation() {
+		
+		allQ = randomTest();
+		wrongAnswers = new ArrayList<Question>();
+		testMark = false;
+		writeQuestion();
+		
+	}
 	
 	private static void mainMenu() {
 		
@@ -349,13 +379,11 @@ public class Test {
 				
 				switch (choice) {
 				case 1:
-					randomTest();
-					allQ = wrongAnswers;
-					wrongAnswers = new ArrayList<Question>();
-					writeQuestion();
+					simulation();
 					break;
 					
 				case 2:
+					testMark = true;
 					subjectMenu();
 					break;
 					
