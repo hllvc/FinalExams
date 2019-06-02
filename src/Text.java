@@ -5,7 +5,7 @@ public class Text {
 		
 		System.out.println("\n___________________\n"
 				+ "\n--MAIN MENU--\n\n"
-				+ "1) Test Simulacija\n"
+				+ "1) Test Simulacija (u razvoju)\n"
 				+ "2) Pojedinacni predmeti\n"
 				+ "3) Ispravi Test (Admin)\n\n"
 				+ "0) IZLAZ");

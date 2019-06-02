@@ -35,8 +35,6 @@ public class Test {
 	private static void loadData(String destination) {
 		
 		allQ.clear();
-		answers.clear();
-		wrongAnswers.clear();
 		q = null;
 		String answer;
 		file = new File("Questions/" + destination);
@@ -265,7 +263,7 @@ public class Test {
 				for (int x : randomNumbers)
 					if (x == random)
 						existing = true;
-			 } while (!existing);
+			 } while (existing);
 			 randomNumbers.add(random);
 			 wrongAnswers.add(allQ.get(random));
 		}
@@ -274,7 +272,6 @@ public class Test {
 	
 	private static void randomTest() {
 		
-		for (int i = 0; i < 22; i++) {
 			loadData("KIRAET");
 			randomQuestion(5, 50);
 			loadData("AKAID");
@@ -317,9 +314,6 @@ public class Test {
 			randomQuestion(4, 25);
 			loadData("DEMOKRATIJA");
 			randomQuestion(4, 25);
-				
-		}
-		
 	}
 	
 	private static void updateAnsw() {
@@ -337,9 +331,11 @@ public class Test {
 				System.out.println("Pogrešan PIN!");
 			
 		} catch (Exception e) {
+			
 		}
 		
 	}
+	
 	
 	private static void mainMenu() {
 		
