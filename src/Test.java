@@ -6,17 +6,32 @@ import java.util.Scanner;
 public class Test {
 	
 	static {
-		System.out.println("\nDobrodošli U Basic Cosole Verziju Ovog Programa.\n"
-				+ "Imate Mogućnosti Da Vježbate I Spremate Testove Za Externu Maturu.\n"
-				+ "Program Prati Vaša Netačno Odgovorena Pitanja I Daje Vam Priliku Da Ih Ispravite!\n"
-				+ "-------------------\n"
-				+ "Kontrole:\n"
-				+ "-Za Navigaciju Pratite Brojeve Pokraj Opcije Koju Želite,\n"
-				+ "\tUnesete Broj A Zatim ENTER!\n"
-				+ "-U Toku Testa Pišete Slovo Ispred Željenog Odgovora Pa ENTER!\n"
-				+ "\t!!!Test Možete Napustiti Ako Unesete 0 (nulu)\n"
-				+ "\nSRETNO I UŽIVAJTE");
+		
+		Text.intro();
+		
 	}
+	
+	final private static String SUBJECT_1 = "KIRAET";
+	final private static String SUBJECT_2 = "AKAID";
+	final private static String SUBJECT_3 = "FIKH";
+	final private static String SUBJECT_4 = "AHLAK";
+	final private static String SUBJECT_5 = "TEFSIR";
+	final private static String SUBJECT_6 = "HADIS";
+	final private static String SUBJECT_7 = "POVIJEST ISLAMA";
+	final private static String SUBJECT_8 = "BOSANSKI JEZIK";
+	final private static String SUBJECT_9 = "ENGLESKI JEZIK";
+	final private static String SUBJECT_10 = "HISTORIJA";
+	final private static String SUBJECT_11 = "GEOGRAFIJA";
+	final private static String SUBJECT_12 = "FILOZOFIJA";
+	final private static String SUBJECT_13 = "PSIHOLOGIJA";
+	final private static String SUBJECT_14 = "LOGIKA";
+	final private static String SUBJECT_15 = "PEDAGOGIJA";
+	final private static String SUBJECT_16 = "SOCIOLOGIJA";
+	final private static String SUBJECT_17 = "HEMIJA";
+	final private static String SUBJECT_18 = "BIOLOGIJA";
+	final private static String SUBJECT_19 = "INFORMATIKA";
+	final private static String SUBJECT_20 = "TIZO";
+	final private static String SUBJECT_21 = "DEMOKRATIJA";
 	
 	private static ArrayList<Question> allQ = new ArrayList<Question>(); 
 	private static ArrayList<String> answers = new ArrayList<String>();
@@ -24,14 +39,46 @@ public class Test {
 	private static String question;
 	private static String correctAnswer;
 	
-	private static int numberOfCorrect;
-	private static int numberOfWrong;
+	final private static String EXIT_KEYWORD = "exit";
+	final private static String CORRECT_KEYWORD = "correct";
+	final private static String INCORRECT_KEYWORD = "incorrect";
+	final private static int ANSWERS_40 = 40;
+	final private static int ANSWERS_55 = 55;
+	final private static int ANSWERS_39 = 39;
+	final private static int ANSWERS_70 = 70;
+	final private static int ANSWERS_54 = 54;
+	final private static int ANSWERS_85 = 85;
+	final private static int ANSWERS_69 = 69;
+	final private static int MARK_1 = 1;
+	final private static int MARK_2 = 2;
+	final private static int MARK_3 = 3;
+	final private static int MARK_4 = 4;
+	final private static int MARK_5 = 5;
+	
+	public static int numberOfCorrect;
+	public static int numberOfWrong;
 	private static boolean testMark;
 	private static ArrayList<Question> wrongAnswers = new ArrayList<Question>();
+	
+	final private static String PARENT_DESTINATION = "Questions/";
+	final private static int NUMBER_OF_ANSWERS = 4;
+	final private static String CORRECT_ANSW_SIGN = "*";
 	
 	private static Scanner input = new Scanner(System.in);
 	private static Scanner textInput;
 	private static File file;
+	
+	final private static char ZERO_CHAR = '0';
+	final private static char Y_CHAR = 'y';
+	final private static char N_CHAR = 'n';
+	
+	final private static int NUMBER_OF_Q_5 = 5;
+	final private static int NUMBER_OF_Q_4 = 4;
+	final private static int NUMBER_OF_Q_13 = 13;
+	final private static int NUMBER_OF_Q_10 = 10;
+	final private static int NUMBER_OF_Q_3 = 3;
+	
+	final private static int PASSWORD = 210500;
 	
 	private static void loadData(String destination) {
 		
@@ -39,14 +86,14 @@ public class Test {
 		q = null;
 		answers.clear();
 		String answer;
-		file = new File("Questions/" + destination);
+		file = new File(PARENT_DESTINATION + destination);
 		try {
 			textInput = new Scanner(file);
 			while (textInput.hasNextLine() && textInput.hasNext()) {
 				question = textInput.nextLine();
-				for (int i = 0; i < 4; i++) {
+				for (int i = 0; i < NUMBER_OF_ANSWERS; i++) {
 					answer = textInput.nextLine();
-					if (answer.contains("*")) {
+					if (answer.contains(CORRECT_ANSW_SIGN)) {
 						answer = answer.substring(0, answer.length() - 1);
 						correctAnswer = answer;
 					}
@@ -59,13 +106,13 @@ public class Test {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+		textInput.close();
 	}
 	
 	private static void writeQuestion() {
 		
 		numberOfCorrect = 0;
 		numberOfWrong = 0;
-		int mark;
 		
 		System.out.println();
 		for (Question subject : allQ) {
@@ -74,34 +121,25 @@ public class Test {
 			answers = q.getAnswers();
 			for (String answ : answers)
 				System.out.println(answ);
-			System.out.println();
-			System.out.print("Vaš Odgovor: ");
+			Text.response();
 			char answer = input.next().charAt(0);
-			if(checkQuestion(answer) == "exit")
+			if(checkQuestion(answer) == EXIT_KEYWORD)
 				break;
-			if(checkQuestion(answer) == "correct") {
+			if(checkQuestion(answer) == CORRECT_KEYWORD) {
 				numberOfCorrect++;
-				System.out.println("----------------------\n"
-						+ "Vaš Odgovor Je Tačan!"
-						+ "\n----------------------\n");
+				Text.correctAnsw();
 			} else {
 				numberOfWrong++;
 				wrongAnswers.add(q);
-				System.out.println("----------------------\n"
-						+ "Netačan Odgovor!\n\n"
-						+ q.getQ()
-						+ "\n\nTačan Odgovor Je: \n"
-						+ q.getCorrectAnswer()
-						+ "\n----------------------\n");
+				Text.wrongAnsw(q);
 			}
 		}
 		
-		System.out.println("\nBroj Tačnih: " + numberOfCorrect);
-		System.out.println("Broj Netačnih: " + numberOfWrong);
+		Text.testResult();
 		if (!testMark) {
 			testMark = true;
-			mark = getMark(numberOfCorrect);
-			System.out.println("Ocijena: " + mark);
+			Text.mark(getMark(numberOfCorrect));
+			
 		}
 		if (!wrongAnswers.isEmpty()) {
 			allQ = wrongAnswers;
@@ -114,36 +152,36 @@ public class Test {
 	
 	private static int getMark(int numberOfCorrect) {
 		
-		if (numberOfCorrect < 40)
-			return 1;
-		else if (numberOfCorrect < 55 && numberOfCorrect > 39)
-			return 2;
-		else if (numberOfCorrect < 70 && numberOfCorrect > 54)
-			return 3;
-		else if (numberOfCorrect < 85 && numberOfCorrect > 69)
-			return 4;
+		if (numberOfCorrect < ANSWERS_40)
+			return MARK_1;
+		else if (numberOfCorrect < ANSWERS_55 && numberOfCorrect > ANSWERS_39)
+			return MARK_2;
+		else if (numberOfCorrect < ANSWERS_70 && numberOfCorrect > ANSWERS_54)
+			return MARK_3;
+		else if (numberOfCorrect < ANSWERS_85 && numberOfCorrect > ANSWERS_69)
+			return MARK_4;
 		else
-			return 5;
+			return MARK_5;
 		
 	}
 	
 	private static String checkQuestion(char answer) {
 		
-		if (answer == '0')
-			return "exit";
+		if (answer == ZERO_CHAR)
+			return EXIT_KEYWORD;
 		if (answer == q.getCorrectAnswer().charAt(0))
-			return "correct";
+			return CORRECT_KEYWORD;
 		else
-			return "incorrect";
+			return INCORRECT_KEYWORD;
 	}
 	
 	private static void missedQ() {
 		
-		System.out.println("\nŽelite li ponoviti pogrešno odgovorena pitanja (y/n)? - ");
+		Text.repeat();
 		char answer = input.next().charAt(0);
-		if (answer == 'y')
+		if (answer == Y_CHAR)
 			writeQuestion();
-		else
+		else if (answer == N_CHAR)
 			return;
 		
 	}
@@ -155,112 +193,112 @@ public class Test {
 			
 			do {
 				Text.subjectMenu();
-				System.out.print("\nVaš Odabir: ");
+				Text.response();
 				choice = input.nextByte();
 				
 				switch (choice) {
 				case 1:
-					loadData("KIRAET");
+					loadData(SUBJECT_1);
 					writeQuestion();
 					break;
 					
 				case 2:
-					loadData("AKAID");
+					loadData(SUBJECT_2);
 					writeQuestion();
 					break;
 					
 				case 3:
-					loadData("FIKH");
+					loadData(SUBJECT_3);
 					writeQuestion();
 					break;
 					
 				case 4:
-					loadData("AHLAK");
+					loadData(SUBJECT_4);
 					writeQuestion();
 					break;
 					
 				case 5:
-					loadData("TEFSIR");
+					loadData(SUBJECT_5);
 					writeQuestion();
 					break;
 					
 				case 6:
-					loadData("HADIS");
+					loadData(SUBJECT_6);
 					writeQuestion();
 					break;
 					
 				case 7:
-					loadData("POVIJEST ISLAMA");
+					loadData(SUBJECT_7);
 					writeQuestion();
 					break;
 					
 				case 8:
-					loadData("BOSANSKI JEZIK");
+					loadData(SUBJECT_8);
 					writeQuestion();
 					break;
 					
 				case 9:
-					loadData("ENGLESKI JEZIK");
+					loadData(SUBJECT_9);
 					writeQuestion();
 					break;
 					
 				case 10:
-					loadData("HISTORIJA");
+					loadData(SUBJECT_10);
 					writeQuestion();
 					break;
 					
 				case 11:
-					loadData("GEOGRAFIJA");
+					loadData(SUBJECT_11);
 					writeQuestion();
 					break;
 					
 				case 12:
-					loadData("FILOZOFIJA");
+					loadData(SUBJECT_12);
 					writeQuestion();
 					break;
 					
 				case 13:
-					loadData("PSIHOLOGIJA");
+					loadData(SUBJECT_13);
 					writeQuestion();
 					break;
 					
 				case 14:
-					loadData("LOGIKA");
+					loadData(SUBJECT_14);
 					writeQuestion();
 					break;
 					
 				case 15:
-					loadData("PEDAGOGIJA");
+					loadData(SUBJECT_15);
 					writeQuestion();
 					break;
 					
 				case 16:
-					loadData("SOCIOLOGIJA");
+					loadData(SUBJECT_16);
 					writeQuestion();
 					break;
 					
 				case 17:
-					loadData("HEMIJA");
+					loadData(SUBJECT_17);
 					writeQuestion();
 					break;
 					
 				case 18:
-					loadData("BIOLOGIJA");
+					loadData(SUBJECT_18);
 					writeQuestion();
 					break;
 					
 				case 19:
-					loadData("INFORMATIKA");
+					loadData(SUBJECT_19);
 					writeQuestion();
 					break;
 					
 				case 20:
-					loadData("TIZO");
+					loadData(SUBJECT_20);
 					writeQuestion();
 					break;
 					
 				case 21:
-					loadData("DEMOKRATIJA");
+					loadData(SUBJECT_21);
 					writeQuestion();
 					break;
 				}
@@ -292,48 +330,48 @@ public class Test {
 	
 	private static ArrayList<Question> randomTest() {
 		
-		loadData("KIRAET");
-		randomQuestion(5, 50);
-		loadData("AKAID");
-		randomQuestion(5, 50);
-		loadData("FIKH");
-		randomQuestion(5, 50);
-		loadData("AHLAK");
-		randomQuestion(4, 35);
-		loadData("TEFSIR");
-		randomQuestion(4, 30);
-		loadData("HADIS");
-		randomQuestion(4, 30);
-		loadData("POVIJEST ISLAMA");
-		randomQuestion(4, 35);
-		loadData("BOSANSKI JEZIK");
-		randomQuestion(13, 108);
-		loadData("ENGLESKI JEZIK");
-		randomQuestion(10, 100);
-		loadData("HISTORIJA");
-		randomQuestion(4, 25);
-		loadData("GEOGRAFIJA");
-		randomQuestion(4, 25);
-		loadData("FILOZOFIJA");
-		randomQuestion(4, 25);
-		loadData("PSIHOLOGIJA");
-		randomQuestion(4, 20);
-		loadData("LOGIKA");
-		randomQuestion(3, 20);
-		loadData("PEDAGOGIJA");
-		randomQuestion(3, 25);
-		loadData("SOCIOLOGIJA");
-		randomQuestion(4, 25);
-		loadData("HEMIJA");
-		randomQuestion(4, 35);
-		loadData("BIOLOGIJA");
-		randomQuestion(4, 35);
-		loadData("INFORMATIKA");
-		randomQuestion(4, 25);
-		loadData("TIZO");
-		randomQuestion(4, 25);
-		loadData("DEMOKRATIJA");
-		randomQuestion(4, 25);
+		loadData(SUBJECT_1);
+		randomQuestion(NUMBER_OF_Q_5, allQ.size());
+		loadData(SUBJECT_2);
+		randomQuestion(NUMBER_OF_Q_5, allQ.size());
+		loadData(SUBJECT_3);
+		randomQuestion(NUMBER_OF_Q_5, allQ.size());
+		loadData(SUBJECT_4);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_5);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_6);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_7);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_8);
+		randomQuestion(NUMBER_OF_Q_13, allQ.size());
+		loadData(SUBJECT_9);
+		randomQuestion(NUMBER_OF_Q_10, allQ.size());
+		loadData(SUBJECT_10);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_11);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_12);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_13);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_14);
+		randomQuestion(NUMBER_OF_Q_3, allQ.size());
+		loadData(SUBJECT_15);
+		randomQuestion(NUMBER_OF_Q_3, allQ.size());
+		loadData(SUBJECT_16);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_17);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_18);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_19);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_20);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_21);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
 		
 		return wrongAnswers;
 	}
@@ -342,15 +380,15 @@ public class Test {
 		
 		try {
 			
-			final int pass = 210500;
+			final int pass = PASSWORD;
 			int pass1;
-			System.out.print("\nUnesite PIN: ");
+			Text.inputPIN();
 			pass1 = input.nextInt();
 			if (pass1 == pass) {
-				File file = new File("Questions");
+				File file = new File(PARENT_DESTINATION);
 				Desktop.getDesktop().open(file);
 			} else
-				System.out.println("Pogrešan PIN!");
+				Text.wrongPIN();
 			
 		} catch (Exception e) {
 			
@@ -374,7 +412,7 @@ public class Test {
 			
 			do {
 				Text.mainMenu();
-				System.out.print("\nVaš Odabir: ");
+				Text.response();
 				choice = input.nextByte();
 				
 				switch (choice) {
@@ -402,7 +440,8 @@ public class Test {
 	public static void main(String[] args) {
 
 		mainMenu();
-		System.out.println("\nNapustili Ste Program!\nSretno Na Maturi!!!");
+		Text.endMsg();
+		input.close();
 		
 	}
 	
