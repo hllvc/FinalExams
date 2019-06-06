@@ -54,6 +54,10 @@ public class Text {
 		System.out.print("\nVaš Odgovor: ");
 	}
 	
+	public static void choice() {
+		System.out.print("\nVaš Odabir: ");
+	}
+	
 	public static void correctAnsw() {
 		System.out.println("----------------------\n"
 				+ "Vaš Odgovor Je Tačan!"
@@ -86,7 +90,7 @@ public class Text {
 	}
 	
 	public static void repeat() {
-		System.out.println("\nŽelite li ponoviti pogrešno odgovorena pitanja (y/n)? - ");
+		System.out.print("\nŽelite li ponoviti pogrešno odgovorena pitanja (y/n)? - ");
 	}
 	
 	public static void endMsg() {

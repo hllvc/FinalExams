@@ -193,7 +193,7 @@ public class Test {
 			
 			do {
 				Text.subjectMenu();
-				Text.response();
+				Text.choice();
 				choice = input.nextByte();
 				
 				switch (choice) {
@@ -412,7 +412,7 @@ public class Test {
 			
 			do {
 				Text.mainMenu();
-				Text.response();
+				Text.choice();
 				choice = input.nextByte();
 				
 				switch (choice) {
