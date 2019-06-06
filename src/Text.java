@@ -36,7 +36,7 @@ public class Text {
 				+ " 8) Bosanski jezik i književnost\n"
 				+ " 9) Engleski jezik\n"
 				+ "10) Historija\n"
-				+ "11) GeografjiaA\n"
+				+ "11) Geografija\n"
 				+ "12) Filozofija\n"
 				+ "13) Psiholgija\n"
 				+ "14) Logika\n"
