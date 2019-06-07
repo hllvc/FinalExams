@@ -42,11 +42,12 @@ public class Text {
 				+ "14) Logika\n"
 				+ "15) Pedagogija feat. DIDAKTIKA\n"
 				+ "16) Sociologija\n"
-				+ "17) Hemija\n"
-				+ "18) Biologija\n"
-				+ "19) Informatika\n"
-				+ "20) Tizo\n"
-				+ "21) Demokratija i ljudska prava\n\n"
+				+ "17) Fizika\n"
+				+ "18) Hemija\n"
+				+ "19) Biologija\n"
+				+ "20) Informatika\n"
+				+ "21) Tizo\n"
+				+ "22) Demokratija i ljudska prava\n\n"
 				+ "0) NAZAD");
 	}
 	

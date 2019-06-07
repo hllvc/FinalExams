@@ -27,11 +27,12 @@ public class Test {
 	final private static String SUBJECT_14 = "LOGIKA";
 	final private static String SUBJECT_15 = "PEDAGOGIJA";
 	final private static String SUBJECT_16 = "SOCIOLOGIJA";
-	final private static String SUBJECT_17 = "HEMIJA";
-	final private static String SUBJECT_18 = "BIOLOGIJA";
-	final private static String SUBJECT_19 = "INFORMATIKA";
-	final private static String SUBJECT_20 = "TIZO";
-	final private static String SUBJECT_21 = "DEMOKRATIJA";
+	final private static String SUBJECT_17 = "FIZIKA";
+	final private static String SUBJECT_18 = "HEMIJA";
+	final private static String SUBJECT_19 = "BIOLOGIJA";
+	final private static String SUBJECT_20 = "INFORMATIKA";
+	final private static String SUBJECT_21 = "TIZO";
+	final private static String SUBJECT_22 = "DEMOKRATIJA";
 	
 	private static ArrayList<Question> allQ = new ArrayList<Question>(); 
 	private static ArrayList<String> answers = new ArrayList<String>();
@@ -72,9 +73,8 @@ public class Test {
 	final private static char Y_CHAR = 'y';
 	final private static char N_CHAR = 'n';
 	
-	final private static int NUMBER_OF_Q_5 = 5;
 	final private static int NUMBER_OF_Q_4 = 4;
-	final private static int NUMBER_OF_Q_13 = 13;
+	final private static int NUMBER_OF_Q_12 = 12;
 	final private static int NUMBER_OF_Q_10 = 10;
 	final private static int NUMBER_OF_Q_3 = 3;
 	
@@ -301,6 +301,11 @@ public class Test {
 					loadData(SUBJECT_21);
 					writeQuestion();
 					break;
+					
+				case 22:
+					loadData(SUBJECT_22);
+					writeQuestion();
+					break;
 				}
 				
 			} while (choice != 0);
@@ -331,11 +336,11 @@ public class Test {
 	private static ArrayList<Question> randomTest() {
 		
 		loadData(SUBJECT_1);
-		randomQuestion(NUMBER_OF_Q_5, allQ.size());
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
 		loadData(SUBJECT_2);
-		randomQuestion(NUMBER_OF_Q_5, allQ.size());
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
 		loadData(SUBJECT_3);
-		randomQuestion(NUMBER_OF_Q_5, allQ.size());
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
 		loadData(SUBJECT_4);
 		randomQuestion(NUMBER_OF_Q_4, allQ.size());
 		loadData(SUBJECT_5);
@@ -345,7 +350,7 @@ public class Test {
 		loadData(SUBJECT_7);
 		randomQuestion(NUMBER_OF_Q_4, allQ.size());
 		loadData(SUBJECT_8);
-		randomQuestion(NUMBER_OF_Q_13, allQ.size());
+		randomQuestion(NUMBER_OF_Q_12, allQ.size());
 		loadData(SUBJECT_9);
 		randomQuestion(NUMBER_OF_Q_10, allQ.size());
 		loadData(SUBJECT_10);
@@ -371,6 +376,8 @@ public class Test {
 		loadData(SUBJECT_20);
 		randomQuestion(NUMBER_OF_Q_4, allQ.size());
 		loadData(SUBJECT_21);
+		randomQuestion(NUMBER_OF_Q_4, allQ.size());
+		loadData(SUBJECT_22);
 		randomQuestion(NUMBER_OF_Q_4, allQ.size());
 		
 		return wrongAnswers;
