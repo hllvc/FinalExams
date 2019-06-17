@@ -19,8 +19,8 @@ public class Text {
 				+ "\n--MAIN MENU--\n\n"
 				+ "1) Test Simulacija (u razvoju)\n"
 				+ "2) Pojedinacni predmeti\n"
-				+ "3) Izborni Predmeti\n"
-				+ "99) Ispravi Test (Admin)\n\n"
+				+ "3) Izborni Predmeti\n\n"
+				+ "00) Ispravi Test (Admin)\n\n"
 				+ "0) IZLAZ");
 	}
 
@@ -112,6 +112,11 @@ public class Text {
 	
 	public static void inputPIN() {
 		System.out.print("\nUnesite PIN: ");
+	}
+	
+	public static void wrongInput() {
+		System.out.print("\n___________________\n\n"
+				+ "Pogrešan Unos!");
 	}
 	
 }

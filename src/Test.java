@@ -110,6 +110,12 @@ public class Test {
 		textInput.close();
 	}
 	
+	private static boolean checkAnswer(char answer) {
+		if (answer > 'd' || answer < 'a')
+			return false;
+		return true;
+	}
+	
 	private static void writeQuestion() {
 		
 		numberOfCorrect = 0;
@@ -122,8 +128,15 @@ public class Test {
 			answers = q.getAnswers();
 			for (String answ : answers)
 				System.out.println(answ);
+			char answer;
+			boolean status = true;
 			Text.response();
-			char answer = input.next().charAt(0);
+			do {
+				if (!status)
+					Text.response();
+				answer = input.next().charAt(0);
+				status = checkAnswer(answer);
+			} while (!status);
 			if(checkQuestion(answer) == EXIT_KEYWORD)
 				break;
 			if(checkQuestion(answer) == CORRECT_KEYWORD) {
@@ -307,6 +320,10 @@ public class Test {
 					loadData(SUBJECT_22);
 					writeQuestion();
 					break;
+					
+				default:
+					Text.wrongInput();
+					
 				}
 				
 			} while (choice != 0);
@@ -408,7 +425,6 @@ public class Test {
 		
 		allQ = randomTest();
 		wrongAnswers = new ArrayList<Question>();
-		testMark = false;
 		writeQuestion();
 		
 	}
@@ -428,6 +444,9 @@ public class Test {
 					loadData(SUBJECT_23);
 					writeQuestion();
 					break;
+					
+				default:
+					Text.wrongInput();
 				
 				}
 				
@@ -440,36 +459,43 @@ public class Test {
 	
 	private static void mainMenu() {
 		
-		byte choice;
+		String choice;
 		try {
 			
 			do {
 				Text.mainMenu();
 				Text.choice();
-				choice = input.nextByte();
+				choice = input.next();
 				
 				switch (choice) {
-				case 1:
+				case "1":
+					testMark = false;
 					simulation();
 					break;
 					
-				case 2:
+				case "2":
 					testMark = true;
 					subjectMenu();
 					break;
 					
-				case 3:
+				case "3":
+					testMark = false;
 					additionalSubj();
 					break;
 					
-				case 4:
+				case "00":
 					updateAnsw();
 					break;
+					
+				default:
+					Text.wrongInput();
+					
 				}
 				
-			} while (choice != 0);
+			} while (!choice.equals("0"));
 			
 		} catch (Exception e) {
+			
 		}
 		
 	}
