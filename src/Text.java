@@ -19,7 +19,8 @@ public class Text {
 				+ "\n--MAIN MENU--\n\n"
 				+ "1) Test Simulacija (u razvoju)\n"
 				+ "2) Pojedinacni predmeti\n"
-				+ "3) Ispravi Test (Admin)\n\n"
+				+ "3) Izborni Predmeti\n"
+				+ "99) Ispravi Test (Admin)\n\n"
 				+ "0) IZLAZ");
 	}
 
@@ -49,6 +50,12 @@ public class Text {
 				+ "21) Tizo\n"
 				+ "22) Demokratija i ljudska prava\n\n"
 				+ "0) NAZAD");
+	}
+	
+	public static void additionalSubj() {
+		System.out.println("\n___________________\n"
+				+ "\n--PREDMETI--\n\n"
+				+ "1) Informatika");
 	}
 	
 	public static void response() {

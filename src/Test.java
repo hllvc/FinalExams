@@ -33,6 +33,7 @@ public class Test {
 	final private static String SUBJECT_20 = "INFORMATIKA";
 	final private static String SUBJECT_21 = "TIZO";
 	final private static String SUBJECT_22 = "DEMOKRATIJA";
+	final private static String SUBJECT_23 = "INFORMATIKA-IZB";
 	
 	private static ArrayList<Question> allQ = new ArrayList<Question>(); 
 	private static ArrayList<String> answers = new ArrayList<String>();
@@ -412,6 +413,31 @@ public class Test {
 		
 	}
 	
+	private static void additionalSubj() {
+		byte choice;
+		try {
+			
+			do {
+				Text.additionalSubj();
+				Text.choice();
+				choice = input.nextByte();
+				
+				switch (choice) {
+				
+				case 1:
+					loadData(SUBJECT_23);
+					writeQuestion();
+					break;
+				
+				}
+				
+			} while (choice != 0);
+			
+		} catch (Exception e) {
+			
+		}
+	}
+	
 	private static void mainMenu() {
 		
 		byte choice;
@@ -433,6 +459,10 @@ public class Test {
 					break;
 					
 				case 3:
+					additionalSubj();
+					break;
+					
+				case 4:
 					updateAnsw();
 					break;
 				}

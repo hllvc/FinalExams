@@ -1,0 +1,750 @@
+1. Šta je IP adresa?
+a. Binarni broj koji predstavlja jedinstvenu adresu racunara u racunarskoj mreži
+b. Binarni broj koji predstavlja jedinstvenu adresu interfejsa u racunarskoj mreži*
+c. Oktalni broj koji predstavlja jedinstvenu adresu interfejsa u racunarskoj mreži
+d. Oktalni broj koji predstavlja jedinstvenu adresu racunara u racunarskoj mreži
+2. IPv4 adresa se sastoji od:
+a. 256 bita
+b. 32 bita*
+c. 64 bita
+d. 128 bita
+3. Šta je subnet maska
+a. IP adresa za google.com
+b. IP adresa mrežne kartice
+c. IP adresa koja razdvaja mrežni i korisnicki dio*
+d. IP adresa proxy servera
+4. Klase IPv4 adresa mogu biti:
+a. G, H i I
+b. A, B i C*
+c. D, E i F
+d. J, K i L
+5. Primjer IPv4 adrese je:
+a. 192.168.456.1
+b. 192.168.368.1
+c. 192.168.168.1*
+d. 192.168.256.1
+6. Koji je maksimalni broj interfejsa koji mogu biti ukljuceni u racunarsku mrežu sa IP adresom 192.168.0.1/28
+a. 128
+b. 64
+c. 32
+d. 16*
+7. Koliko bita pripada mrežnom dijelu IP adrese 192.168.0.1/36
+a. 36*
+b. 168
+c. 1
+d. 192
+8. Koja je maksimalna vrijednost jedne IP adrese?
+a. 256.256.256.256.
+b. 255.255.255.255*
+c. 128.128.128.128.
+d. 1.1.1.1
+9. Šta je DNS?
+a. Domain National Server
+b. Domain Name Server
+c. Domain Name System*
+d. Domain National System
+10. Šta je HTTP?
+a. HTML Transfer Type Protocol
+b. Hard Text Transfer Protocol
+c. Hyper Text Transfer Protocol*
+d. HDD Transfer Text Protocol
+11. Šta je FTP?
+a. Folder Transfer Protocol
+b. Format Transfer Protocol
+c. File Transfer Protocol*
+d. Fast Transfer Protocol
+12. Šta je SMTP?
+a. Single Mail Transfer Protocol
+b. Support Mail Transfer Protocol
+c. Speed Mail Transfer Protocol
+d. Simple Mail Transfer Protocol*
+13. Šta je DHCP?
+a. Domain Host Configuration Protocol
+b. Dynamic Hyper Configuration Protocol
+c. Dynamic Host Configuration Protocol*
+d. Dynamic Host Control Protocol
+14. Šta je Default Gateway?
+a. IP adresa modema
+b. Subnet maska
+c. Glavni server
+d. Interfejs koji usmjerava na druge mreže*
+15. Šta je UTP?
+a. Universal twisted pair
+b. Unshielded transfer pair
+c. Unshielded twisted pair*
+d. Universal transfer protocol
+16. Koji model racunarskih mreža koristi internet?
+a. DHCP/IP
+b. TCP/IP*
+c. P2P/IP
+d. DNS/IP
+17. Najpoznatiji proizvodaci HDD su:
+a. Maxtor i WesternDigital*
+b. Hp i Maxtor
+c. Maxtor i WesternDisk
+d. Toshiba i Hp
+18. Za kapacitet HDD danas koristimo prefiks:
+a. Mega i Giga
+b. Giga i Tera*
+c. Kilo i Mega
+d. Giga i Kilo
+19. Kapacitet optickih medija se krece:
+a. oko nekoliko GB*
+b. oko nekoliko Hz
+c. oko nekoliko TB
+d. oko nekoliko MB
+20. Konektori na koje se spajaju opticki uredaji mogu biti:
+a. SATA i PATA
+b. PATA i AGP
+c. AGP i SATA
+d. SATA i PATA*
+21. Vrste RAM memorije su:
+a. DDR i SD RAM
+b. DDR i SD RAM*
+c. SD RAM i AGP
+d. AGP i DDR
+22. Koji konektori se koriste za spajanje maticne ploce sa grafickom karticom?
+a. SATA i AGP
+b. AGP i PATA
+c. PCI, AGP i DDR
+d. PCI i AGP*
+23. Koji konektori se nalaze na izlazu graficke kartice?
+a. DVI i AGP
+b. VGA i DVI*
+c. VGA, DVI i DIMM
+d. AGP i HDMI
+24. Tehnolohije koje se koriste u izradi grafickih kartica su:
+a. VGA, XGA i SVGA*
+b. VGA, XGA i DDR
+c. VGA, LCD i CRT
+d. VGA, DVI i HDMI
+25. Na performanse graficke kartice utice:
+a. Broj izlaznih konektora
+b. Broj uredaja za hladenje
+c. Kolicina bilo koje memorije
+d. Kolicina radne memorije*
+26. Odgovarajuci izlazni uredaji za graficku karticu mogu biti:
+a. Projektor i štampac
+b. Monitor, projektor i skener
+c. Štampac i skener
+d. Monitor i projektor*
+27. Koji konektori se koriste za spajanje maticne ploce sa zvucnom karticom?
+a. SATA
+b. AGP
+c. PCI*
+d. PCI i SLOT
+28. Koji konektori se nalaze na izlazu zvucne kartice?
+a. 3,99 mm minijack
+b. 3,5 mm minijack*
+c. VGA
+d. USB
+29. U izlazne uredaje se ne ubraja:
+a. Skener i Štampac
+b. Štampac i Ploter
+c. Skener i Mikrofon*
+d. Zvucnik i Monitor
+30. Šta je informacija?
+a. Informacija predstavlja preslikavanje stanja jednog subjekta u stanje drugog subjekta*
+b. Informacija predstavlja preslikavanje jednog subjekta u drugog subjekta
+c. Informacija predstavlja preslikavanje stanja subjekta u stanje objekta
+d. Informacija nema definiciju
+31. U ulazne uredaje se ubraja:
+a. Mikrofon i Štampac
+b. Štampac i Ploter
+c. Skener i Mikrofon*
+d. Zvucnik i Monitor
+32. Jedinica za mjerenje rezolucije kod monitora je:
+a. GB
+b. px*
+c. dpi
+d. inch
+33. Jedinica za mjerenje rezolucije kod projektora je:
+a. GB
+b. inch
+c. dpi
+d. px*
+34. Šta je tok podataka i tok instrukcija?
+a. Tok podataka su informacije znacajne za sistem, a tok instrukcija za korisnika
+b. Tok podataka su informacije znacajne za korisnika, a tok instrukcija za sistem*
+c. Tok podataka su svi oblici informacija
+d. Tok podataka su informacije znacajne za sistem, a tok instrukcija za tok podataka
+35. Jedinica za mjerenje rezolucije kod štampaca je:
+a. GB
+b. dpi
+c. inch
+d. px*
+36. Jedinica za mjerenje rezolucije kod skenera je:
+a. inch
+b. px*
+c. GB
+d. dpi
+37. Frekvencija osvježavanja kod monitora je:
+a. Broj promjena slike u jednoj sekundi*
+b. Broj tacaka po kvadratnom inchu
+c. Broj revizija u jednoj sekundi
+d. Broj incha po dijagonali
+38. Najpoznatiji proizvodaci monitora su:
+a. Samsung, LG, Asus i Acer
+b. Samsung, LG i Asus*
+c. Asus, Biostar i Fxconn
+d. Kingston, Samsung i LG
+39. Tehnologije koje se koriste za izradu projektora mogu biti:
+a. Hybrid, DLP, LED i AGP
+b. XGA, VGA i SVGA
+c. Hybrid, DLP i LED*
+d. CRT, DDR i VGA
+40. Koji konektori se koriste za spajanje maticne ploce sa monitorom?
+a. VGA, XGA i SVGA
+b. VGA, DVI i HDMI*
+c. VGA, XGA, SVGA i AGP
+d. VGA, LCD i CRT
+41. Koji konektori se koriste za spajanje maticne ploce sa projektorom?
+a. VGA, LCD i CRT
+b. VGA, DVI i HDMI
+c. VGA, XGA i SVGA*
+d. VGA, XGA, SVGA i AGP
+42. Parametri o kojima treba voditi racuna pri izboru monitora su:
+a. Frekvencija osvježavanja, dužina dijagonale i rezolucija*
+b. Rezolucija, težina i broj jezgri
+c. Visina, težina i brzina takta
+d. Frekvencija osvježavanja i boja
+43. Parametri o kojima treba voditi racuna pri izboru projektora su:
+a. Rezolucija, velicina zooma i boja
+b. Rezolucija, velicina zooma i osvjetljenje*
+c. Velicina zooma, frekvencija osvježavanja i težina
+d. Broj konektora, proizvodac i boja
+44. U najpoznatije proizvodace štampaca se ubrajaju:
+a. Epson, Acer i LG
+b. Hp, Epson, Samsung i Acer
+c. Hp, Epson i Samsung*
+d. Samsung, LG i Hp
+45. Parametri koji uticu na performanse štampaca su:
+a. Težina i rezolucija
+b. Rezolucija i vrsta konektora
+c. Brzina štampanja i rezolucija*
+d. Brzina štampanja i boja
+46. Konektor pomocu kojeg možemo spojiti i skener i štampac je:
+a. VGA
+b. USB*
+c. PS/2
+d. HSB
+47. Pored maticne ploce, koja komponenta zahtijeva spajanje sa napojnom jedinicom?
+a. RAM i HDD
+b. Graficka kartica i RAM
+c. HDD i napojni uredaji
+d. HDD i opticki uredaji*
+48. Šta od navedenog predstavlja 1.000.000.000.000.000.000 bajtova?
+a. MILI Bajz
+b. GIGA Bajt
+c. TERA Bajt
+d. EXA Bajt*
+49. Koji je ekvivalent binarnog broja 1011 u heksadecimalnom BS?
+a. C
+b. A
+c. X
+d. B*
+50. Koja je vrijednost binarnog izraza 11001101+101010 u decimalnom BS?
+a. 427
+b. 247*
+c. 274
+d. 0
+51. Koliko iznosi binarni zbir oktalnog broja 47 i heksadecimalnog brija 1E1?
+a. 10000100000
+b. 10000100001
+c. 0
+d. 10000010000*
+52. Koliko iznosi heksadecimalni zbir oktalnog broja 623 i binarnog broja 1010?
+a. 19C
+b. 0
+c. 19D*
+d. 19B
+53. Koja je vrijednost binarnog izraza 11001101+101010 u oktalnom BS?
+a. 0
+b. 368
+c. 367*
+d. 366
+54. Koliko je 7*6 u heksdecimalnom BS?
+a. 4A
+b. 2A*
+c. 3A
+d. 0
+55. Koliko je 10*11 u binarnom BS?
+a. 100
+b. 110*
+c. 101
+d. 0
+56. Koliko je moguce zapisati petocifrenih brojeva u heksadecimalnom BS?
+a. 100000
+b. 1048576*
+c. 90
+d. 0
+57. Za svaki pozicioni brojni sistem sa bazom b vrijedi:
+a. Cifre su iz skupa (0, 1, 2, ..., b+1)
+b. Cifre su iz skupa (0, 1, 2, ..., b)
+c. Cifre su iz skupa (0, 1, 2, ..., b-1)*
+d. Sve cifre
+58. Cifra binarnog brojnog sistema naziva se:
+a. 0
+b. bit*
+c. digit
+d. bajt
+59. Koliko je moguce zapisati sedmocifrenih brojeva u oktalnom BS?
+a. 0
+b. 10000000
+c. 2097152*
+d. 56
+60. Na procesorskim registrima se pohranjuju:
+a. Podaci o instrukciji koja se trenutno obraduje*
+b. Registri ne služe za pohranu podataka
+c. Podaci o svim instrukcijama koje trebaju da se obrade
+d. Svi podaci iz memorije
+61. Koji je ekvivalent binarnog broja 10111 u oktalnom BS?
+a. 27*
+b. 23
+c. 25
+d. 0
+62. Koji je ekvivalent oktalnog broja 1011 u binarnom BS?
+a. 10000100001
+b. 1000000110
+c. 1000001001*
+d. 0
+63. Jedinica dpi se koristi za mjerenje:
+a. Rezolucije kod digitalne kamere
+b. Rezolucije kod monitora
+c. Rezolucije kod štampaca*
+d. Boja
+64. Jedinica px se koristi za mjerenje:
+a. Boja
+b. Rezolucije kod digitalne kamere
+c. Rezolucije kod monitora*
+d. Rezolucije kod skenera
+65. Jedinica B se koristi za mjerenje:
+a. Kapaciteta racunara
+b. Kapaciteta memorije*
+c. Kapaciteta procesora
+d. Cijene memorije i procesora
+66. Jedinica str/min se koristi za mjerenje:
+a. Brzine procesora
+b. Brzine štampanja*
+c. Boje
+d. Brzine memorije
+67. Koji raspored tastera odgovara bosanskom jeziku?
+a. QWERTY
+b. QWERTZ*
+c. ABCDEF
+d. ABCDEX
+68. Za potpunu i ispravnu komunikaciju racunara sa I/O uredajima neophodni su:
+a. Sistemi
+b. Programi
+c. Uredaji
+d. Driveri*
+69. Šta je overclocking?
+a. Pokrtanje procesora
+b. Podešavanje frekvencije takta procesora ispod fabrickih postavki
+c. Podešavanje frekvencije takta procesora iznad fabrickih postavki*
+d. Podešavanje višejezgrenosti procesora iznad fabrickih postavki
+70. Sistem boja koji se koristi kod prikaza slike na izlaznom uredaju je:
+a. ASP
+b. HSB
+c. RGB*
+d. CMYK
+71. Za koje vrste web stranica se može koristiti WP kao platforma?
+a. Blog
+b. Blog i Ecommerce*
+c. Portal
+d. Ecommerce
+72. Adresa sa koje se može preuzeti oficijelna instalacija WP je:
+a. WordPress.ba
+b. WordPress.org*
+c. WordPress.com
+d. WordPress.net
+73. Koji je naziv za najpopularniji ecommerce plugin?
+a. WowCommerce
+b. WoahCommerce
+c. WinCommerce
+d. WooCommerce*
+74. Šta služi u svrhu organizacije postova u WP?
+a. Jezici i kategorije
+b. Podkategorije i jezici
+c. Oznake i jezici
+d. Kategorije i oznake*
+75. Šta su WP teme?
+a. Skup datoteka koje kontroliraju izgled menija
+b. Skup datoteka koje kontroliraju cjelokupan izgled stranice*
+c. Skup datoteka koje kontroliraju izgled kategorija
+d. Skup datoteka koje kontroliraju izgled pocetne stranice
+76. Šta od navedenog nije standardna korisnicka uloga/role?
+a. Editor
+b. Blogger*
+c. Subscriber
+d. Administrator
+77. Gdje se prikazuje izdvojena/featured slika u WP postu?
+a. Zavisi od WP teme*
+b. U liniji s naslovom
+c. Ispod naslova
+d. Iznad naslova
+78. Koje se opcije ne mogu pronaci u post editoru prilikom kreiranja novog posta?
+a. Oznake
+b. Page Attributes*
+c. Jezike
+d. Kategorije
+79. Šta nije ukljuceno u instalaciju WP?
+a. Kontakt forma*
+b. Plugini
+c. Postove
+d. Stranice
+80. Koju funkcionalnost koristi WP kako bi razlicitim korisnicima omogucavao pristup razlicitim funkcionalnostima
+a. Cookies
+b. Sessions
+c. Username
+d. User role*
+81. Ispravan nacin instalacije novog plugina je:
+a. Plugins-Add New Plugin-Upload Plugin-Install
+b. Plugins-Upload New Plugin-Install
+c. Plugin-Add-Upload-Install
+d. Plugins-Add New-Upload Plugin-Install*
+82. U kojem folderu se smještaju WP teme?
+a. wp-content/main
+b. wp-content/uploads
+c. wp-admin/uploads
+d. wp-content/themes*
+83. Šta su trajni linkovi?
+a. Dio WP URL-a ciji izgled se može kontrolirati
+b. Kompletan URL WP stranice*
+c. Domena
+d. IP adresa WP stranice
+84. Koji trajni link se koristi za pristup administratorskom dijelu WP stranice?
+a. /admin
+b. /wp-login
+c. /wp-content
+d. /wp-admin*
+85. U kojem programskom jeziku je napisan WP?
+a. PHP*
+b. Ruby
+c. C
+d. Python
+86. Koju bazu podataka koristi WP?
+a. MSSQL
+b. MySQL*
+c. PostgreSQL
+d. Oracle
+87. U kojem folderu se smještaju WP plugini?
+a. /wp-login
+b. /wp-admin
+c. /admin
+d. /wp-content*
+88. WP zahtijeva:
+a. Server sa C i MSSQL
+b. Server sa PHP i MySQL*
+c. Server sa Ruby on Rails
+d. Server sa PHP i PostgreSQL
+89. Koliko košta licenca WP?
+a. 299 $
+b. Ništa*
+c. 299 KM
+d. 299 ?
+90. Prilikom updatea i upgradea WP najvažnije je:
+a. Izvršiti backup*
+b. Instalirati Askimet plugin
+c. Biti siguran da nova verzija WP završava sa .2
+d. Obezbijediti da je stranica pokrenuta
+91. Struja podataka (data stream) je:
+a. Brzina prenosa podataka u MM sistemu
+b. Nacin komunikacije u MM sistemu
+c. Oblik medija u MM sistemu
+d. Niz podatkovnih jedinica u MM sistemu*
+92. U osnovne tipove medija ubraja se:
+a. Video sa titlovima
+b. Videokonferencijski sistem
+c. Video*
+d. Videokonferencija
+93. Modeli boja za sliku mogu biti:
+a. PAL, RGB i NTSC
+b. PAL, NTSC i SECAM
+c. HSB, CMY i SECAM
+d. RGB, CMY i HSB*
+94. Brzina osvježavanja video okvira mjeri se u :
+a. fps*
+b. Hz
+c. bit
+d. dpi
+95. Koliki je maksimalni broj boja za sliku sa rezolucijom 5x7 i dubinom 4?
+a. 14
+b. 16*
+c. 12
+d. 18
+96. Standardi za analogni video mogu biti:
+a. HSB
+b. PAL*
+c. RGB
+d. HDD
+97. Software namijenjen za analizu audio signala je:
+a. Audacity*
+b. Camtasia
+c. Angular
+d. Photoshop
+98. Software namijenjen za analizu slike je:
+a. Audacity
+b. Photoshop*
+c. Angular
+d. Camtasia
+99. Software namijenjen za analizu videa je:
+a. Camtasia*
+b. Audacity
+c. Photoshop
+d. Angular
+100. U vremeneski ovisne medije se ubraja:
+a. Video*
+b. Tekst
+c. Audio
+d. Slika
+101. U vremenski neovisne medije se ubraja:
+a. MM sistem
+b. Text*
+c. Video
+d. Videokonferencija
+102. Svaka komanda (tag) unutar HTML stranice se definira izmedu:
+a. {i}
+b. <i>*
+c. [i]
+d. /i/
+103. Komande koje su namijenjene iskljucivo za uredivanje liste su:
+a. td, dd i li
+b. ul, ol i li*
+c. tr, td i ol
+d. td, tr i ul
+104. Atribut href se definira unutar komande:
+a. b
+b. a*
+c. c
+d. d
+105. Interni CSS stilovi se pišu kao:
+a. Dio atributa style
+b. Dio komande style*
+c. U zasebnom fajlu
+d. Automatski
+106. Za specifikaciju celija koje se prostiru preko više redova koristimo:
+a. automatski se prostiru preko više redova
+b. rowspan="br_kolona"
+c. rowspan="br_redova"*
+d. colspan="br_redova"
+107. Za specifikaciju celija koje se prostiru preko više kolona koristimo:
+a. automatski se prostiru preko više kolona
+b. rowspan="br_redova"
+c. colspan="br_kolona"*
+d. rowspan="br_kolona"
+108. Inline CSS stilovi se pišu kao:
+a. Dio komande style
+b. U zasebnom fajlu
+c. Automatski
+d. vrijednost atributa style*
+109. Eksterni CSS stilovi se pišu kao:
+a. Dio komande style
+b. U zasebnom fajlu*
+c. Automatski
+d. vrijednost atributa style
+110. Asinhroni prijenos multimedijskih podataka podrazumijeva komunikaciju:
+a. Sa definiranim maksimalnim i minimalnim kašnjenjem
+b. Bez vremenskih ogranicenja
+c. Sa definiranim minimalnim kašnjenjem*
+d. Sa definiranim maksimalnim kašnjenjem
+111. Neki od standarda za kodiranje nepomicne slike su:
+a. JPEG, BMP, MP4...
+b. TIFF, BMP, JPEG...*
+c. BMP, AVI, TIFF...
+d. AVI, RGM, HSB...
+112. Glasnoca zvuka se mjeri u:
+a. kB
+b. dB*
+c. Hz
+d. pt
+113. Današnje racunarske mrežem obzirom na nacin transporta informacija, upotrebljavaju:
+a. obicni prenos podataka
+b. paketski prenos podataka*
+c. digitalni prenos podataka
+d. bitski prenos podataka
+114. Prema nacinu spajanja racunarske mreže dijelimo na:
+a. WLAN i Ethernet
+b. LAN i MAN
+c. Ethernet i MAN
+d. LAN i WLAN*
+115. Modem je mrežni uredaj koji operira na:
+a. fizickom sloju
+b. aplikacijskom sloju
+c. transportnom sloju
+d. mrežnom sloju*
+116. Racunarska grafika u kojoj su objekti matematicki definirani i neovisni o rezoluciji naziva se:
+a. Digitalna
+b. Vektorksa*
+c. Matematicka
+d. Bitmapska
+117. Prema udaljenosti mrežnih uredaja racunarske mreže se dijele na:
+a. LAN, WLAN i MAN
+b. LAN, WAN i MAN*
+c. Ethernet, MAN i WAN
+d. Internet, Intranet i Ethernet
+118. Sa stanovišta mrežne komunikacije proces sa dinamickom adresom koji je povremeno prisutan na mreži i koji inicira konekciju u naziva se:
+a. p2p (peer-to-peer)
+b. Klijent-Server
+c. Server
+d. Klijent*
+119. Programi ciji je iskljucivi zadatak cišcenje sistema od neželjenih programa nazivaju se:
+a. Zaštitni programi
+b. Antispyware programi*
+c. Firewall programi
+d. Antivirus programi
+120. Osobina algoritama da mora uvijek završiti nakon odredenog broja koraka naziva se:
+a. Kompatibilnost
+b. Konacnost*
+c. Definiranost
+d. Efikasnost
+121. Racunarska grafika koja se bazira na pixelima naziva se:
+a. Bitmapska*
+b. Matematicka
+c. Vektorksa
+d. Digitalna
+122. Sa stanovišta mrežne komunikacije proces sa statickom koji je stalno prisutan na mreži i koji prima konekciju u naziva se:
+a. Klijent-Server
+b. p2p (peer-to-peer)
+c. Klijent
+d. Server*
+123. Programi ciji je iskljucivi zadatak sprecavanje neželjenih upada u racunarski sistem nazivaju se:
+a. Antispyware programi
+b. Antivirus programi
+c. Firewall programi*
+d. Zaštitni programi
+124. Programi ciji je iskljucivi zadatak zaštita od zlonamjernih programa nazivaju se
+a. Antivirus programi*
+b. Antispyware programi
+c. Zaštitni programi
+d. Firewall programi
+125. Ekstenzija koja se dodaje datotekama kreiranim u MS Wordu je
+a. .dok
+b. .xls
+c. .dot
+d. .doc*
+126. Softver namijenjen iskljucivo za obradu teksta je:
+a. MS Access
+b. LO Writer*
+c. MS Excel
+d. LO Calc
+127. Koja je od navedenih adresa relativnog karaktera:
+a. $A$1
+b. $A1
+c. A1*
+d. A$1
+128. Koja je od navedenih adresa apsolutnog karaktera:
+a. A$1
+b. $A$1*
+c. A1
+d. $A1
+129. Koja je od navedenih adresa mješovitog karaktera:
+a. $A1*
+b. $A$1
+c. A1
+d. A$$1
+130. Ekstenzija koja se dodaje datotekama kreiranim u MS Excelu je:
+a. .exe
+b. .xls*
+c. .doc
+d. .exc
+131. Funkcija u MS Excelu za izracunavanje prosjecne vrijednosti je:
+a. POWER
+b. SUM
+c. AVERAGE*
+d. PRO
+132. Suma prosjecnih vrijednosti iz kolona A1:A10 i B1:B11 u MS Excelu se može izracunati kao:
+a. SUM(AVERAGE(A1:A11),AVERAGE(B1:B10)
+b. SUM(AVERAGE(A1:A10);AVERAGE(B1:B11)
+c. SUM(AVERAGE(A1:A11);AVERAGE(B1:B10)
+d. SUM(AVERAGE(A1:A10),AVERAGE(B1:B11)*
+133. Kvadratni korijen sume A1 i A10 u MS Excelu se može izracunati kao:
+a. SQRT(AVERAGE(A1:A10))
+b. POWER(AVERAGE(A1:A10))
+c. SQRT(SUM(A1:A10))*
+d. POWER(SUM(A1:A10))
+134. Zaokruži primjer nepravilno unesenog teksta
+a. "Tekst" je: pravilno unesen
+b. "Tekst" je (pravilno) unesen*
+c. " Tekst" je, pravilno, unesen
+d. "Tekst " je (pravilno ) unesen
+135. Zaokruži primjer pravilno unesenog teksta
+a. "Tekst" je ( pravilno ) unesen
+b. " Tekst " je (pravilno) unesen
+c. "Tekst" je (pravilno) unesen*
+d. "Tekst " je (pravilno ) unesen
+136. Koliko ulaznih parametara prima funkcija ROUND u MS Excelu
+a. 1*
+b. 3
+c. 2
+d. proizvoljno
+137. Koliko ulaznih parametara prima funkcija POWER u MS Excelu
+a. proizvoljno
+b. 1*
+c. 2
+d. 3
+138. Koliko ulaznih parametara prima funkcija SQRT u MS Excelu
+a. proizvoljno
+b. 3
+c. 1*
+d. 2
+139. Koje vrste adresiranja postoje u MS Excelu?
+a. Racunarsko i mješovito
+b. Apsolutno i racunarsko
+c. Relativno i apsolutno*
+d. Digitalno i relativno
+140. Adobe Photoshop podržava sljedece formate:
+a. PNG, TIFF i MP4
+b. PDF, MP3 i PNG
+c. TIFF, PSD i PNG*
+d. AVI, JPG i PDF
+141. Audacity podržava sljedece formate:
+a. MP3*
+b. AVI
+c. MP4
+d. JPG
+142. Mrežna kartica je mrežni uredaj koji radi na:
+a. aplikacijskom sloju
+b. fizickom sloju
+c. dtransportnom sloju
+d. mrežnom sloju*
+143. Na kojem sloju racunarskih mreža rade internet preglednici?
+a. aplikacijskom sloju*
+b. fizickom sloju
+c. mrežnom sloju
+d. transportnom sloju
+144. Šta je internetska domena?
+a. Programski jezik
+b. Naziv stranice
+c. Format
+d. Nadimak za IP adresu servera*
+145. Koje godine je registrirana prva .ba domena?
+a. 1998.
+b. 1996.*
+c. 1997.
+d. 1999.
+146. Koja je oznaka za bosanskohercegovacku internetsku domenu?
+a. .bih
+b. .bb
+c. .ba*
+d. .bh
+147. U e-mail klijente se ubrajaju?
+a. Google
+b. MS Outlook*
+c. Bing
+d. MS Access
+148. Ispravan oblik e-mail adrese je:
+a. domena.com@ime
+b. ime_domena.com
+c. domena_ime.com
+d. ime@domena.com*
+149. Šta je e-mail server?
+a. Program za primanje elektronske pošte
+b. Racunar za elektronsku poštu
+c. Program za slanje elektronske pošte
+d. Program za prosljedivanje elektronske pošte*
+150. Šta je proxy server?
+a. Program koji dodjeljuje IP adrese
+b. Program koji prosljeduje elektronsku poštu
+c. Internetski preglednik
+d. Posrednicki program koji sadrži DNS bazu podataka*
